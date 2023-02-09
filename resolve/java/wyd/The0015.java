@@ -7,8 +7,8 @@ import java.util.List;
 public class The0015 {
 
     public static void main(String[] args) {
-        //int[] nums = new int[]{-1,0,1,2,-1,-4};
-        int[] nums = new int[]{1,1,1};
+        int[] nums = new int[]{-1,0,1,2,-1,-4};
+        //int[] nums = new int[]{1,1,1};
 
         List<List<Integer>> lists = threeSum(nums);
         lists.forEach(System.out::println);
@@ -41,11 +41,11 @@ public class The0015 {
                     temp.add(nums[right]);
                     result.add(temp);
 
-                    while(left < right && nums[left] == nums[left+1]) left++;
-                    while(left < right && nums[right] == nums[right-1]) right--;
+                    while (left < right && nums[left] == nums[left + 1]) left++;
+                    while (left < right && nums[right] == nums[right - 1]) right--;
 
-                    right --;
-                    left ++;
+                    right--;
+                    left++;
                 }
             }
         }
